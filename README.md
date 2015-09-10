@@ -14,7 +14,7 @@ A work flow software, designed in the minimalist Unix philosophy.
 Very little. 
 Every time you run it, it demands a name, and then archives the present working directory files in sequential folders that look like '0001-InputName' '0002-InputName2'. 
 It records as much info as possible (username, hostname, date/time) into a 'breadcrumb' file within this directory.
-If it appears to be within a git repo (i.e. ` git init `), it will check in this breadcrumb to the repo with an automatic commit message.
+If it appears to be within a git repo (`git init` is all you need to create one), it will check in this breadcrumb to the repo with an automatic commit message.
 
 You then copy those files you need for the next calculation back into the present directory, then continue working.
 
@@ -30,10 +30,10 @@ Instead you should see:
 
 ## What will it do in the future?
 
-* I'd really like it to save history of the shell. This makes things a lot more specific, and as it is a sub shell, might be easier by assuming / integrating `tmux`. 
+* I'd really like it to save history of the shell. This makes things a lot more specific to software versions / software. It seems difficult to get at this information in a general way, as 'freck' runs in a subshell. This might be easiest to do by assuming / requiring `tmux` or similar.
 
 ## What won't it do?
 
-* Feed into an SQL database <shudder>.
+* Feed into an SQL database (shudder)
 
 <a name="ref1">1</a>: http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/
