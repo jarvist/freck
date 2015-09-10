@@ -4,9 +4,10 @@
 # Freck - "To move swiftly or nimbly."
 # http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/
 
-VERSION="0.02"
+VERSION="0.03"
 # 0.01 Works!
 # 0.02 Uses find + moves [[:upper:]] files to subdir.
+# 0.03 If we appears to be in a git repo; checkin breadcrumb [and thus folder]
 
 echo "If you knew Time as well as I do, said the Hatter, you wouldn't talk about wasting IT. It's HIM."
 
@@ -58,3 +59,12 @@ EOF
 #   HISTFILE="${newdir}"/`date +%Y-%m-%d`_${USER}_at_${HOSTNAME}.dat
 #   history -a # Dump history saved in memory (i.e. this shell)
 
+
+# GIT integration
+
+if [ -d ".git" ]
+then
+    echo "This appears to be a git repository... checking in breadcrumb."
+    git add "${crumb}"
+    git commit -m "${newdir} freck auto commit."
+fi
