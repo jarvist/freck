@@ -13,7 +13,9 @@ A work flow software, designed in the minimalist Unix philosophy.
 
 Very little. 
 Every time you run it, it demands a name, and then archives the present working directory files in sequential folders that look like '0001-InputName' '0002-InputName2'. 
-It records as much info as possible (username, hostname, date/time) into a 'breadcrumb' file within this directory. 
+It records as much info as possible (username, hostname, date/time) into a 'breadcrumb' file within this directory.
+If it appears to be within a git repo (i.e. ` git init `), it will check in this breadcrumb to the repo with an automatic commit message.
+
 You then copy those files you need for the next calculation back into the present directory, then continue working.
 
 The intent is to avoid impossible directory structures that look like: ` NewProject/Optimisation/WhoopsRestard/TighterCoverged/ `
@@ -29,7 +31,6 @@ Instead you should see:
 ## What will it do in the future?
 
 * I'd really like it to save history of the shell. This makes things a lot more specific, and as it is a sub shell, might be easier by assuming / integrating `tmux`. 
-* I might add an (optional) assumption that it should check the breadcrumb file into git, if it detects it is in a git work tree.
 
 ## What won't it do?
 
