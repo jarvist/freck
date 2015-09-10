@@ -11,9 +11,20 @@ A work flow software, designed in the minimalist Unix philosophy.
 
 ## What does it do?
 
-Very little. It demands an input name, then archives the files in the present working directory in a set of folders sequentially named '0001-InputName' '0002-InputName2' etc. It saves as much info as possible (username, hostname, date/time) into a 'breadcrumb' file within this directory. You then copy those files you need for the next calculation back into the present directory, then continue working.
+Very little. 
+Every time you run it, it demands a name, and then archives the present working directory files in sequential folders that look like '0001-InputName' '0002-InputName2'. 
+It records as much info as possible (username, hostname, date/time) into a 'breadcrumb' file within this directory. 
+You then copy those files you need for the next calculation back into the present directory, then continue working.
 
-The intent is to avoid impossible directory structures that look like: ` NewProject/Optimisation/WhoopsRestart/TighterConverged/ `.
+The intent is to avoid impossible directory structures that look like: ` NewProject/Optimisation/WhoopsRestard/TighterCoverged/ `
+
+Instead you should see:
+```
+0001-InitialGeom
+0002-DFT_opt
+0003-Tight_DFT_opt
+0004-PhononCalc
+````
 
 ## What will it do in the future?
 
