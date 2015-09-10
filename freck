@@ -41,15 +41,16 @@ find  ./ -maxdepth 1 -name "[[:upper:]]*" -type f -print0 | xargs -0 -I {} mv {}
 
 echo "Leaving breadcrumbs..."
 crumb="${newdir}/`date +%Y-%m-%d_%H%S`_${USER}_at_${HOSTNAME}"
+# Filename looks like: 2015-09-11_0002_jarvist_at_Asriel
 
 touch "${crumb}"
 
 cat > ${crumb} << EOF
 #Archived with Freck Version ${VERSION}... 
-# Still not able to extract history
+# Still not able to extract history :(
 pwd: ` pwd `
 date: ` date `
-hostname: `hostname `
+hostname: ` hostname `
 EOF
 
 # Doesn't work currently - we're in a sub shell (~:
