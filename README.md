@@ -9,6 +9,8 @@ as you go along, from the command line.
 
 A work flow software, designed in the minimalist Unix philosophy.
 
+The intent is for it to help organise your project files and build a git repo as you go along for future reference and sharing. For a more sophisticant set of tools, you may be interested in http://www.aiida.net/ .
+
 ## What does it do?
 
 Very little. 
