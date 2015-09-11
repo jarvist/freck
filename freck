@@ -67,4 +67,17 @@ then
     echo "This appears to be a git repository... checking in breadcrumb."
     git add "${crumb}"
     git commit -m "${newdir} freck auto commit."
+
+    if [ -e ${newdir}/POSCAR ]
+    then
+        echo "Detected VASP: generating POTCAR.TITEL, commiting along with POSCAR, INCAR, KPOINTS"
+        grep "TITEL"  ${newdir}/POTCAR > ${newdir}/POTCAR.TITEL
+        git add ${newdir}/POTCAR.TITEL 
+        git add ${newdir}/POSCAR 
+        git add ${newdir}/INCAR 
+        git add ${newdir}/KPOINTS
+        git add ${newdir}/CONTCAR
+        git commit -m "${newdir} freck VASP autosave inputs"
+    fi
+
 fi
