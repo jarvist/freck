@@ -33,6 +33,7 @@ Instead you should see:
 ## What will it do in the future?
 
 * I'd really like it to save history of the shell. This makes things a lot more specific to software versions / software. It seems difficult to get at this information in a general way, as 'freck' runs in a subshell. This might be easiest to do by assuming / requiring `tmux` or similar.
+* Useful ideas here: https://news.ycombinator.com/item?id=10162189
 
 ## What won't it do?
 
